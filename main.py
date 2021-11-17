@@ -71,9 +71,7 @@ def rename():
     path = '/home/martina/PycharmProjects/sketch/input'
     files = os.listdir(path)
     for index, file in enumerate(files):
-        index = index + 1
-        os.rename(os.path.join(path, file), os.path.join(path, ''.join(['Human Face #', str(index), '.jpg'])))
-
+        os.rename(os.path.join(path, file), os.path.join(path, f'Human Face {index+1}.jpg'))
 
 
 # Press the green button in the gutter to run the script.
