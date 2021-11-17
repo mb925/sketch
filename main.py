@@ -68,10 +68,10 @@ def img2sketch(photo, k_size):
 
 
 def rename():
-    path = '/home/martina/PycharmProjects/sketch/input'
-    files = os.listdir(path)
+    input = '/home/martina/PycharmProjects/sketch/input'
+    files = os.listdir(input)
     for index, file in enumerate(files):
-        os.rename(os.path.join(path, file), os.path.join(path, f'Human Face {index+1}.jpg'))
+        os.rename(os.path.join(input, file), os.path.join(input, f'Human Face #{index+1}.jpg'))
 
 
 # Press the green button in the gutter to run the script.
