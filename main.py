@@ -68,7 +68,7 @@ def img2sketch(photo, k_size):
 
 
 def rename():
-    path = '/home/martina/PycharmProjects/sketch/backup'
+    path = '/home/martina/PycharmProjects/sketch/input'
     files = os.listdir(path)
     for index, file in enumerate(files):
         index = index + 1
@@ -79,18 +79,18 @@ def rename():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # Function call
+    rename()
 
-    for filename in os.listdir('backup'):
-        print(filename)
-
-        image = cv2.imread(f'backup/{filename}')
-        resized_image = resizeImage(image)
-        coloured = ColorQuantization(resized_image)
-        contoured = findCountours(coloured)
-        final_image = contoured
-        cv2.imwrite('output_640x860/' + filename, final_image)
-        print("Image saved!")
-    # rename()
+    # for filename in os.listdir('input'):
+    #     print(filename)
+    #
+    #     image = cv2.imread(f'input/{filename}')
+    #     resized_image = resizeImage(image)
+    #     coloured = ColorQuantization(resized_image)
+    #     contoured = findCountours(coloured)
+    #     final_image = contoured
+    #     cv2.imwrite('output_640x860/' + filename, final_image)
+    #     print("Image saved!")
 
 
 
